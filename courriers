@@ -1,0 +1,6 @@
+city
+inhabitant
+lettre(nimporte quoi)
+City.sendLetter() -> ajoute un courrier dans la boite au lettre de la ville   postbox
+City.distributeLetters() distribution des courriers de la boite aux lettres de la ville
+
