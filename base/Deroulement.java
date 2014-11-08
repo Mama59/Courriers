@@ -6,8 +6,8 @@ public class Deroulement {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		City roubaix = new City("Roubaix");
-		Inhabitant perso1 = new Inhabitant("perso1", roubaix);
-		Inhabitant perso2 = new Inhabitant("perso2", roubaix);
+		Inhabitant perso1 = new Inhabitant("Toto", roubaix);
+		Inhabitant perso2 = new Inhabitant("Tata", roubaix);
 		roubaix.addInhabitant(perso1);
 		roubaix.addInhabitant(perso2);
 		Text<String> t = new Text<String>("bonjour perso 2 comment vas tu ?");

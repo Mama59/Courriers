@@ -17,8 +17,6 @@ public abstract class Letter<T> {
 	/**
 	 * 
 	 */
-
-
 	public Letter(Inhabitant sender, Inhabitant receiver, T content) {
 		super();
 		this.sender = sender;

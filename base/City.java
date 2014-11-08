@@ -57,6 +57,10 @@ public class City {
 		letterBoxForTomorrow.add(letter);
 		
 	}
+	
+	public List<Inhabitant> getAllInhabitants() {
+		return this.inhabitants;
+	}
 	public String toString()
 	{
 		return name + " " + inhabitants.toString();	

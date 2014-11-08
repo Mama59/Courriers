@@ -55,7 +55,7 @@ public class Inhabitant {
 	}
 	@Override
 	public String toString() {
-		return "Inhabitant ("+name + ": " + account + ")\n";
+		return "("+name + ": " + account + ")";
 	}
 	
 }
