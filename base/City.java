@@ -22,7 +22,6 @@ public class City {
 	 * 
 	 */
 	public City(String name) {
-		// TODO Auto-generated constructor stub
 		this.name = name;
 		inhabitants = new ArrayList<Inhabitant>();
 		letterBox = new ArrayList<Letter<?>>();

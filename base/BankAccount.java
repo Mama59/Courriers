@@ -37,7 +37,7 @@ public class BankAccount {
 	}
 	@Override
 	public String toString() {
-		return "BankAccount [account=" + account +  "]";
+		return account + "€";
 	}
 	
 }
