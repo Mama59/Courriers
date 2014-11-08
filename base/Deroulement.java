@@ -1,6 +1,6 @@
 package base;
-import Content.*;
-import Letter.*;
+import content.*;
+import letter.*;
 public class Deroulement {
 
 	public static void main(String[] args) {

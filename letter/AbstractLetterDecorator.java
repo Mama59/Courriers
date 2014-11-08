@@ -1,4 +1,4 @@
-package Letter;
+package letter;
 
 import base.Inhabitant;
 

@@ -1,6 +1,6 @@
 package base;
 
-import Letter.Letter;
+import letter.Letter;
 /**
  * 
  */

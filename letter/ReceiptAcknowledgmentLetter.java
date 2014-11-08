@@ -1,6 +1,6 @@
-package Letter;
+package letter;
 
-import Content.Text;
+import content.Text;
 
 public class ReceiptAcknowledgmentLetter extends SimpleLetter{
 	private static String msg = "bien recu";

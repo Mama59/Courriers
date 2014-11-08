@@ -1,6 +1,6 @@
-package Letter;
+package letter;
 
-import Content.Money;
+import content.Money;
 import base.Inhabitant;
 
 public class PromissoryNote extends Letter<Money<?>> {
@@ -9,7 +9,7 @@ public class PromissoryNote extends Letter<Money<?>> {
 	public PromissoryNote(Inhabitant sender, Inhabitant receiver,
 			Money<?> content) {
 		super(sender, receiver, content);
-		int value = (int)content.getValue();
+		int value = (Integer) content.getValue();
 		DEFAULT_COST = 1 + value*10/100;
 		// TODO Auto-generated constructor stub
 	}
@@ -29,8 +29,8 @@ public class PromissoryNote extends Letter<Money<?>> {
 	public void action() {
 		// TODO Auto-generated method stub
 		System.out.println("debiter et credite");
-		sender.getAccount().debit((int) content.getValue());
-		receiver.getAccount().credit((int) content.getValue());
+		sender.getAccount().debit((Integer) content.getValue());
+		receiver.getAccount().credit((Integer) content.getValue());
 		receiver.postsLetter(new ThanksLetter(this));
 	}
 

@@ -1,27 +1,27 @@
-package Letter;
+package letter;
 
 
-public class UrgentLetter<T> extends AbstractLetterDecorator<T>{
+public class RegistredLetter<T> extends AbstractLetterDecorator<T>{
+	private int DEFAULT_TAX = 15;
 	private Letter<?> letter;
-	private int DEFAULT_TAX = 2;
-	public UrgentLetter(T letter) {
+	public RegistredLetter(T letter) {
 		super(((Letter<?>) letter).getSender(), ((Letter<?>) letter).getReceiver(), letter);
 		this.letter = (Letter<?>) letter;
 	}
 
-
 	@Override
 	public float getCost() {
 		// TODO Auto-generated method stub
-		return DEFAULT_TAX*letter.getCost();
+		return 15 + letter.getCost();
 	}
 	public void action()
 	{
+		letter.getReceiver().postsLetter(new ReceiptAcknowledgmentLetter(this));
 		letter.action();
 	}
 	@Override
 	public String toString() {
-		return "RegistredLetter ";
+		return "RegistredLetter [DEFAULT_TAX=" + DEFAULT_TAX + "]";
 	}
 
 }

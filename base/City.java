@@ -2,7 +2,7 @@ package base;
 import java.util.ArrayList;
 import java.util.List;
 
-import Letter.Letter;
+import letter.Letter;
 
 /**
  * 

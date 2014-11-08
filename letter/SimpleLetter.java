@@ -1,6 +1,6 @@
-package Letter;
+package letter;
 
-import Content.Text;
+import content.Text;
 import base.Inhabitant;
 
 public class SimpleLetter extends Letter<Text<?>> {

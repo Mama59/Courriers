@@ -1,6 +1,6 @@
-package Letter;
+package letter;
 
-import Content.Text;
+import content.Text;
 
 public class ThanksLetter extends SimpleLetter{
 

@@ -6,3 +6,9 @@
 .classpath
 
 untitled
+
+bin/
+
+.project
+
+*~

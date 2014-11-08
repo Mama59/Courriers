@@ -1,4 +1,4 @@
-package Content;
+package content;
 
 
 public abstract class AbstractContent<T> implements Content{
