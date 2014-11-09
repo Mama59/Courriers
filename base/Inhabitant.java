@@ -16,10 +16,9 @@ public class Inhabitant {
 	/**
 	 * 
 	 */
-	public Inhabitant(String name, City city) {
+	public Inhabitant(String name) {
 		// TODO Auto-generated constructor stub
 		this.name = name;
-		this.city = city;
 		account = new BankAccount();
 	}
 	public BankAccount getAccount() {
@@ -33,29 +32,34 @@ public class Inhabitant {
 	}
 	public void postsLetter(Letter<?> letter)
 	{
-		if(canPostLetter(letter))
-		{
-			account.debit(letter.getCost());
-			city.sendLetter(letter);
-			System.out.println(name + " j'ai envoye une lettre");
-		}
-		else
-		{
-			System.out.println("Je n'ai pas assez d'argent pour envoyer ma lettre :( ");
-		}
+		System.out.println("-> " + this + " mails " + letter );
+		city.sendLetter(letter);
 	}
-	private boolean canPostLetter(Letter<?> letter) {
-		// TODO Auto-generated method stub
-		return (account.canSpend(letter.getCost()));
+	public void debit(float f)
+	{
+		account.debit(f);
+		System.out.println("\t- "+  f + " euros are debited from " + this + " account whose balance is now " +account);
+		
 	}
+	public void credit(float amount)
+	{
+		account.credit(amount);
+		System.out.println("\t+ "+ this + " account is credited with " + amount + " euros; its balance is now " + account );
+	}
+
 	public void receiveLetter(Letter<?> letter)
 	{
+		System.out.println("-> " + this + " receives " + letter.receiveToString());
 		letter.action();
-		System.out.println(name + " j'ai recu une lettre " + letter.toString());
+		
 	}
 	@Override
-	public String toString() {
-		return "("+name + ": " + account + ")";
+	public String toString() 
+	{
+		return ""+name;
+	}
+	public void setCity(City city) {
+		this.city = city;
 	}
 	
 }

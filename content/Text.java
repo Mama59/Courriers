@@ -9,4 +9,11 @@ public class Text<String> extends AbstractContent<String>{
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public java.lang.String toString() {
+		return "a text content ("+value+")";
+	}
+
+
+
 }

@@ -18,14 +18,20 @@ public class CityTest {
 	@Before
 	public void init() {
 		city = new City("Villeneuve d'Ascq");
-		marine = new Inhabitant("Marine", city);
-		remy = new Inhabitant("Remy", city);
+		marine = new Inhabitant("Marine");
+		remy = new Inhabitant("Remy");
 	}
 	
 	@Test
 	public void testToString() {
 		city.addInhabitant(remy);
-		assertEquals("Villeneuve d'Ascq [(Remy: 100€)]",city.toString());
+		assertEquals("Villeneuve d'Ascq [Remy]",city.toString());
+	}
+	@Test
+	public void testAlreadyContains() {
+		city.addInhabitant(remy);
+		city.addInhabitant(remy);
+		assertEquals(city.getNumbersOfInhabitants(),1);
 	}
 	@Test
 	public void testAddInhabitant() {

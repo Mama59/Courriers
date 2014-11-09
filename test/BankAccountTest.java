@@ -1,6 +1,5 @@
 package test;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -28,17 +27,13 @@ public class BankAccountTest {
 	{
 		ba = new BankAccount(100);
 		ba.credit(10);
-		assertEquals(110, ba.getAccount());
+		assertTrue(ba.getAccount() == 110);
 	}
 	@Test
 	public void testDebit()
 	{
 		ba = new BankAccount(100);
 		ba.debit(10);
-		assertEquals(90, ba.getAccount());
+		assertTrue(ba.getAccount() == 90);
 	}
-	//	public float canSpend(float amount);
-	//	public void credit(float amount);
-	//	public void debit(float amount);
-		
-	}
+}

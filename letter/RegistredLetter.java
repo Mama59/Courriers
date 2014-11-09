@@ -12,16 +12,16 @@ public class RegistredLetter<T> extends AbstractLetterDecorator<T>{
 	@Override
 	public float getCost() {
 		// TODO Auto-generated method stub
-		return 15 + letter.getCost();
+		return DEFAULT_TAX + letter.getCost();
 	}
 	public void action()
 	{
-		letter.getReceiver().postsLetter(new ReceiptAcknowledgmentLetter(this));
 		letter.action();
+		letter.getReceiver().postsLetter(new ReceiptAcknowledgmentLetter(this));
 	}
 	@Override
-	public String toString() {
-		return "RegistredLetter [DEFAULT_TAX=" + DEFAULT_TAX + "]";
+	public String toString() 
+	{
+		return "a Registred letter whose content is "+content;
 	}
-
 }

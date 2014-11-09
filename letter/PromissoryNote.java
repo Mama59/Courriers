@@ -10,8 +10,7 @@ public class PromissoryNote extends Letter<Money<?>> {
 			Money<?> content) {
 		super(sender, receiver, content);
 		int value = (Integer) content.getValue();
-		DEFAULT_COST = 1 + value*10/100;
-		// TODO Auto-generated constructor stub
+		DEFAULT_COST = (float) (1 + value*0.1);
 	}
 
 	@Override
@@ -22,15 +21,14 @@ public class PromissoryNote extends Letter<Money<?>> {
 
 	@Override
 	public String toString() {
-		return "PromissoryNote [DEFAULT_COST=" + DEFAULT_COST + "]";
+		return "a PromissoryNote letter whose content is " + content;
 	}
 
 	@Override
 	public void action() {
 		// TODO Auto-generated method stub
-		System.out.println("debiter et credite");
-		sender.getAccount().debit((Integer) content.getValue());
-		receiver.getAccount().credit((Integer) content.getValue());
+		sender.debit((Integer) content.getValue());
+		receiver.credit((Integer) content.getValue());
 		receiver.postsLetter(new ThanksLetter(this));
 	}
 

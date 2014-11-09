@@ -17,7 +17,9 @@ public class Money<Integer> extends AbstractContent<Integer>{
 		// TODO Auto-generated constructor stub
 	}
 
-
-
+	@Override
+	public String toString() {
+		return "a money content ("+value +")";
+	}
 
 }

@@ -9,8 +9,8 @@ package base;
  */
 public class BankAccount {
 
-	private int account;
-	private int DEFAULT_AMOUNT = 100;
+	private float account;
+	private float DEFAULT_AMOUNT = 5000;
 	public BankAccount() {
 		this.account = DEFAULT_AMOUNT;
 	}
@@ -24,20 +24,18 @@ public class BankAccount {
 	}
 	public void credit(float amount)
 	{
-		System.out.println("j'ai recu "+ amount + " euros");
 		account += amount;
 	}
 	public void debit(float amount)
 	{
-		System.out.println("j'ai depenser "+ amount + " euros");
 		account -= amount;
 	}
-	public int getAccount() {
+	public float getAccount() {
 		return account;
 	}
 	@Override
 	public String toString() {
-		return account + "€";
+		return account + " euros";
 	}
 	
 }

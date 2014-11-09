@@ -10,7 +10,7 @@ public class ThanksLetter extends SimpleLetter{
 
 	@Override
 	public String toString() {
-		return "ThanksLetter ";
+		return "a ThanksLetter ";
 	}
 
 }

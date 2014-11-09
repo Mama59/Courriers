@@ -19,8 +19,9 @@ public class SimpleLetter extends Letter<Text<?>> {
 
 	@Override
 	public String toString() {
-		return "SimpleLetter " + content;
+		return "a simple letter whose content is " + content;
 	}
+	
 
 	@Override
 	public void action() {

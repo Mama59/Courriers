@@ -29,7 +29,15 @@ public class City {
 	}
 	public void addInhabitant(Inhabitant hab)
 	{
-		inhabitants.add(hab);
+		if(inhabitants.contains(hab))
+		{
+			System.out.println("City " + name + " already contains " + hab);
+		}
+		else
+		{
+			inhabitants.add(hab);
+			hab.setCity(this);
+		}			
 	}
 	protected void distributeLetters()
 	{
@@ -41,8 +49,8 @@ public class City {
 	}
 	public void playDay()
 	{
-		distributeLetters();
 		majLetters();
+		distributeLetters();
 	}
 	protected void majLetters()
 	{
@@ -55,11 +63,15 @@ public class City {
 	public void sendLetter(Letter<?> letter)
 	{
 		letterBoxForTomorrow.add(letter);
-		
+		letter.getReceiver().debit(letter.getCost());
 	}
 	
 	public List<Inhabitant> getAllInhabitants() {
 		return this.inhabitants;
+	}
+	public int getNumbersOfInhabitants()
+	{
+		return inhabitants.size();
 	}
 	public String toString()
 	{

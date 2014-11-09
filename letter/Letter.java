@@ -34,4 +34,10 @@ public abstract class Letter<T> {
 	}
 	public abstract float getCost();
 	public abstract void action();
+	public String sendToString() {
+		return this +" to " + receiver;
+	}
+	public String receiveToString() {
+		return this + " from " + sender;
+	}
 }

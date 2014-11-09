@@ -21,7 +21,7 @@ public class UrgentLetter<T> extends AbstractLetterDecorator<T>{
 	}
 	@Override
 	public String toString() {
-		return "RegistredLetter ";
+		return "an UrgentLetter whose content is " + content;
 	}
 
 }
