@@ -68,7 +68,7 @@ public class Deroulement {
 		Random rand = new Random();
 		Letter<?> letter;
 		Random rand2 = new Random();
-		switch(rand.nextInt(7))
+		switch(rand.nextInt(5))
 		{
 			case 0 : 
 				letter = new PromissoryNote(senderI, receiverI, new Money<Integer>(rand2.nextInt(100)));

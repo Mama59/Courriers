@@ -3,7 +3,7 @@ package content;
 
 public abstract class AbstractContent<T> implements Content{
 
-	T value;
+	protected T value;
 	public AbstractContent(T value) {
 		// TODO Auto-generated constructor stub
 		this.value = value;

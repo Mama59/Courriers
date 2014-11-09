@@ -63,7 +63,7 @@ public class City {
 	public void sendLetter(Letter<?> letter)
 	{
 		letterBoxForTomorrow.add(letter);
-		letter.getReceiver().debit(letter.getCost());
+		letter.getSender().debit(letter.getCost());
 	}
 	
 	public List<Inhabitant> getAllInhabitants() {
@@ -73,8 +73,18 @@ public class City {
 	{
 		return inhabitants.size();
 	}
+	public int getNumbersOfLettersForTomorrow()
+	{
+		// TODO Auto-generated method stub
+		return letterBoxForTomorrow.size();
+	}
+	public int getNumbersOfLettersForToday() {
+		// TODO Auto-generated method stub
+		return letterBox.size();
+	}
 	public String toString()
 	{
 		return name + " " + inhabitants.toString();	
 	}
+	
 }

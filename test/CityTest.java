@@ -1,13 +1,16 @@
 package test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import letter.SimpleLetter;
+
 import org.junit.Before;
 import org.junit.Test;
 
+import content.Text;
 import base.City;
 import base.Inhabitant;
 
@@ -40,5 +43,27 @@ public class CityTest {
 		city.addInhabitant(marine);
 		assertEquals(liste,city.getAllInhabitants());
 	}
-
+	@Test
+	public void testSendLetter()
+	{
+		city.addInhabitant(remy);
+		city.addInhabitant(marine);
+		float acc = remy.getAccount().getAccount();
+		SimpleLetter l = new SimpleLetter(remy, marine, new Text<String>("coucou, comment vas tu ?"));
+		city.sendLetter(l);
+		assertTrue(city.getNumbersOfLettersForTomorrow() == 1);
+		assertTrue(remy.getAccount().getAccount() == acc - l.getCost() );
+	}
+	@Test
+	public void testDistributeLetter()
+	{
+		city.addInhabitant(remy);
+		city.addInhabitant(marine);
+		SimpleLetter l = new SimpleLetter(remy, marine, new Text<String>("coucou, comment vas tu ?"));
+		city.sendLetter(l);
+		assertTrue(city.getNumbersOfLettersForTomorrow() == 1);
+		city.playDay();
+		assertTrue(city.getNumbersOfLettersForToday() == 0);
+		assertTrue(city.getNumbersOfLettersForTomorrow() == 0);
+	}
 }
