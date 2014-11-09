@@ -11,7 +11,6 @@ public class RegistredLetter<T> extends AbstractLetterDecorator<T>{
 
 	@Override
 	public float getCost() {
-		// TODO Auto-generated method stub
 		return DEFAULT_TAX + letter.getCost();
 	}
 	public void action()

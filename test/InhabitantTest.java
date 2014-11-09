@@ -1,18 +1,15 @@
 package test;
 
-import static org.junit.Assert.*;
-
-import java.util.ArrayList;
-import java.util.List;
-
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import letter.SimpleLetter;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import content.Text;
 import base.City;
 import base.Inhabitant;
+import content.Text;
 
 public class InhabitantTest {
 	City city;
@@ -27,26 +24,26 @@ public class InhabitantTest {
 	@Test
 	public void testCredit()
 	{
-		float acc = marine.getAccount().getAccount();
+		float acc = marine.getAccount().getAccountAmount();
 		marine.credit(100);
-		assertTrue(marine.getAccount().getAccount()==  acc + 100 );
+		assertTrue(marine.getAccount().getAccountAmount()==  acc + 100 );
 	}
 	@Test
 	public void testDebit()
 	{
-		float acc = marine.getAccount().getAccount();
+		float acc = marine.getAccount().getAccountAmount();
 		marine.debit(100);
-		assertTrue(marine.getAccount().getAccount()==  acc - 100 );
+		assertTrue(marine.getAccount().getAccountAmount()==  acc - 100 );
 	}
 	@Test
 	public void testPostLetter()
 	{
 		city.addInhabitant(marine);
 		city.addInhabitant(remy);
-		float acc = marine.getAccount().getAccount();
+		float acc = marine.getAccount().getAccountAmount();
 		int letterForTmrw = city.getNumbersOfLettersForTomorrow();
 		marine.postsLetter(new SimpleLetter(marine, remy, new Text<String>("bonjour")));
-		assertTrue(acc - 1 == marine.getAccount().getAccount());
+		assertTrue(acc - 1 == marine.getAccount().getAccountAmount());
 		assertTrue(city.getNumbersOfLettersForTomorrow() == letterForTmrw +1);
 	}
 	@Test

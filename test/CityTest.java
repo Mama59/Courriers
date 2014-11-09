@@ -48,11 +48,11 @@ public class CityTest {
 	{
 		city.addInhabitant(remy);
 		city.addInhabitant(marine);
-		float acc = remy.getAccount().getAccount();
+		float acc = remy.getAccount().getAccountAmount();
 		SimpleLetter l = new SimpleLetter(remy, marine, new Text<String>("coucou, comment vas tu ?"));
 		city.sendLetter(l);
 		assertTrue(city.getNumbersOfLettersForTomorrow() == 1);
-		assertTrue(remy.getAccount().getAccount() == acc - l.getCost() );
+		assertTrue(remy.getAccount().getAccountAmount() == acc - l.getCost() );
 	}
 	@Test
 	public void testDistributeLetter()

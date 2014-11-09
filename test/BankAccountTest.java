@@ -28,17 +28,17 @@ public class BankAccountTest {
 	public void testCredit()
 	{
 		ba.credit(10);
-		assertTrue(ba.getAccount() == 110 && ba.getAccount() > 100);
+		assertTrue(ba.getAccountAmount() == 110 && ba.getAccountAmount() > 100);
 	}
 	@Test
 	public void testDebit()
 	{
 		ba.debit(10);
-		assertTrue(ba.getAccount() == 90);
+		assertTrue(ba.getAccountAmount() == 90);
 	}
 	@Test
 	public void testToString() 
 	{
-		assertEquals(ba.toString(), ba.getAccount() + " euros");
+		assertEquals(ba.toString(), ba.getAccountAmount() + " euros");
 	}
 }

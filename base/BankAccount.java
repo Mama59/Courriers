@@ -30,7 +30,7 @@ public class BankAccount {
 	{
 		account -= amount;
 	}
-	public float getAccount() {
+	public float getAccountAmount() {
 		return account;
 	}
 	@Override
