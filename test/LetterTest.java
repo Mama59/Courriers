@@ -11,12 +11,12 @@ import base.City;
 import base.Inhabitant;
 import content.Money;
 
-public class LetterTest {
+public class LetterTest{
 	City gotham;
 	Inhabitant remy,marine;
 	PromissoryNote promissory;
 	Money<Integer> c;
-	RegistredLetter rl;
+	RegistredLetter<PromissoryNote> rl;
 	@Before
 	public void init() {
 		gotham = new City("Gotham City");
