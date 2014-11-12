@@ -15,7 +15,7 @@ public class LetterTest{
 	City gotham;
 	Inhabitant remy,marine;
 	PromissoryNote promissory;
-	Money<Integer> c;
+	Money c;
 	RegistredLetter<PromissoryNote> rl;
 	@Before
 	public void init() {
@@ -24,7 +24,7 @@ public class LetterTest{
 		marine = new Inhabitant("Marine");
 		gotham.addInhabitant(remy);
 		gotham.addInhabitant(marine);
-		c = new Money<Integer>(10);
+		c = new Money(10);
 		promissory = new PromissoryNote(remy,marine,c);
 		rl = new RegistredLetter<PromissoryNote>(promissory);
 	}

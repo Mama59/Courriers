@@ -4,7 +4,7 @@ package base;
  */
 
 /**
- * @author Marine
+ * @author Marine,Remy
  *
  */
 public class BankAccount {
@@ -14,23 +14,40 @@ public class BankAccount {
 	public BankAccount() {
 		this.account = DEFAULT_AMOUNT;
 	}
+	/**
+	 * Set the account with the specified amount
+	 * @param account
+	 */
 	public BankAccount(int account) {
-		// TODO Auto-generated constructor stub
 		this.account = account;
 	}
-	public boolean canSpend(float amount)
-	{
+	/**
+	 * 
+	 * @param amount
+	 * @return if the person can spend the amount
+	 */
+	public boolean canSpend(float amount){
 		return (account - amount) >= 0 ;
 	}
-	public void credit(float amount)
-	{
+	/**
+	 * credit the account with the specified amount
+	 * @param amount
+	 */
+	public void credit(float amount){
 		account += amount;
 	}
-	public void debit(float amount)
-	{
+	/**
+	 * debit the account with specified amount
+	 * @param amount
+	 */
+	public void debit(float amount){
 		account -= amount;
 	}
-	public float getAccountAmount() {
+	/**
+	 * 
+	 * @return the remaining amount on the account;
+	 */
+	public float getAccountAmount(){
 		return account;
 	}
 	@Override

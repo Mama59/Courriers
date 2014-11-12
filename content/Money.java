@@ -9,9 +9,11 @@ package content;
  * @param <Integer>
  *
  */
-@SuppressWarnings("hiding")
-public class Money<Integer> extends AbstractContent<Integer>{
-
+public class Money extends AbstractContent<Integer>{
+	/**
+	 * 
+	 * @param value 
+	 */
 	public Money(Integer value) {
 		super(value);
 	}

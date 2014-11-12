@@ -2,14 +2,12 @@ package letter;
 
 import base.Inhabitant;
 
-public abstract class AbstractLetterDecorator<T> extends Letter<T>{
+public abstract class AbstractLetterDecorator<T extends Letter<?>> extends Letter<T>{
 
-	public AbstractLetterDecorator(Inhabitant sender, Inhabitant receiver,
-			T content) {
+	public AbstractLetterDecorator(Inhabitant sender, Inhabitant receiver,T content) {
 		super(sender, receiver, content);
 	}
-	public void action()
-	{
+	public void action(){
 		
 	}
 	@Override

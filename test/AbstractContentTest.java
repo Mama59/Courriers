@@ -13,8 +13,7 @@ public abstract class AbstractContentTest<T> implements ContentTest{
 	
 	protected abstract AbstractContent<T> createContent();
 	@Before
-	public void init()
-	{
+	public void init(){
 		test = createContent();
 	}
 	

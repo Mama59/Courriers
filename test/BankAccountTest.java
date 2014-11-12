@@ -9,36 +9,36 @@ import base.BankAccount;
 
 public class BankAccountTest {
 	BankAccount ba;
+
 	@Before
-	public void init()
-	{
+	public void init() {
 		ba = new BankAccount(100);
 	}
+
 	@Test
-	public void testCanSpend()
-	{
+	public void testCanSpend() {
 		assertTrue(ba.canSpend(100));
 	}
+
 	@Test
-	public void testCantSpend()
-	{
+	public void testCantSpend() {
 		assertFalse(ba.canSpend(105));
 	}
+
 	@Test
-	public void testCredit()
-	{
+	public void testCredit() {
 		ba.credit(10);
 		assertTrue(ba.getAccountAmount() == 110 && ba.getAccountAmount() > 100);
 	}
+
 	@Test
-	public void testDebit()
-	{
+	public void testDebit() {
 		ba.debit(10);
 		assertTrue(ba.getAccountAmount() == 90);
 	}
+
 	@Test
-	public void testToString() 
-	{
+	public void testToString() {
 		assertEquals(ba.toString(), ba.getAccountAmount() + " euros");
 	}
 }

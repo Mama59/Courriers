@@ -49,7 +49,7 @@ public class CityTest {
 		city.addInhabitant(remy);
 		city.addInhabitant(marine);
 		float acc = remy.getAccount().getAccountAmount();
-		SimpleLetter l = new SimpleLetter(remy, marine, new Text<String>("coucou, comment vas tu ?"));
+		SimpleLetter l = new SimpleLetter(remy, marine, new Text("coucou, comment vas tu ?"));
 		city.sendLetter(l);
 		assertTrue(city.getNumbersOfLettersForTomorrow() == 1);
 		assertTrue(remy.getAccount().getAccountAmount() == acc - l.getCost() );
@@ -59,7 +59,7 @@ public class CityTest {
 	{
 		city.addInhabitant(remy);
 		city.addInhabitant(marine);
-		SimpleLetter l = new SimpleLetter(remy, marine, new Text<String>("coucou, comment vas tu ?"));
+		SimpleLetter l = new SimpleLetter(remy, marine, new Text("coucou, comment vas tu ?"));
 		city.sendLetter(l);
 		assertTrue(city.getNumbersOfLettersForTomorrow() == 1);
 		city.playDay();

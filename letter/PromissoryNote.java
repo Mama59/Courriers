@@ -3,10 +3,16 @@ package letter;
 import content.Money;
 import base.Inhabitant;
 
-public class PromissoryNote extends Letter<Money<?>> {
+public class PromissoryNote extends Letter<Money> {
 
 	private float DEFAULT_COST;
-	public PromissoryNote(Inhabitant sender, Inhabitant receiver,Money<?> content) {
+	/**
+	 * Constructor of the PromissoryNote
+	 * @param sender
+	 * @param receiver
+	 * @param content
+	 */
+	public PromissoryNote(Inhabitant sender, Inhabitant receiver,Money content) {
 		super(sender, receiver, content);
 		int value = (Integer) content.getValue();
 		DEFAULT_COST = (float) (1 + value*0.1);

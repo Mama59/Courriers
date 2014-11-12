@@ -42,7 +42,7 @@ public class InhabitantTest {
 		city.addInhabitant(remy);
 		float acc = marine.getAccount().getAccountAmount();
 		int letterForTmrw = city.getNumbersOfLettersForTomorrow();
-		marine.postsLetter(new SimpleLetter(marine, remy, new Text<String>("bonjour")));
+		marine.postsLetter(new SimpleLetter(marine, remy, new Text("bonjour")));
 		assertTrue(acc - 1 == marine.getAccount().getAccountAmount());
 		assertTrue(city.getNumbersOfLettersForTomorrow() == letterForTmrw +1);
 	}
