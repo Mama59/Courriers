@@ -13,6 +13,9 @@ public class RegistredLetter<T extends Letter<?>> extends AbstractLetterDecorato
 	public float getCost() {
 		return DEFAULT_TAX + letter.getCost();
 	}
+	/**
+	 * call the action of letter
+	 */
 	public void action() {
 		letter.action();
 		letter.getReceiver().postsLetter(new ReceiptAcknowledgmentLetter(this));
