@@ -2,7 +2,11 @@ package letter;
 
 import content.Text;
 import base.Inhabitant;
-
+/**
+ * 
+ * @author Marine,Remy
+ *
+ */
 public class SimpleLetter extends Letter<Text> {
 
 	private float DEFAULT_COST = 1;

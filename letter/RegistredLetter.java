@@ -1,5 +1,9 @@
 package letter;
-
+/**
+ * 
+ * @author Marine,Remy
+ *
+ */
 
 public class RegistredLetter<T extends Letter<?>> extends AbstractLetterDecorator<T>{
 	private int DEFAULT_TAX = 15;

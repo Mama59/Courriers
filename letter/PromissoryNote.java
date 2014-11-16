@@ -2,15 +2,19 @@ package letter;
 
 import content.Money;
 import base.Inhabitant;
-
+/**
+ * 
+ * @author Marine,Remy
+ *
+ */
 public class PromissoryNote extends Letter<Money> {
 
 	private float DEFAULT_COST;
 	/**
 	 * Constructor of the PromissoryNote
-	 * @param sender
-	 * @param receiver
-	 * @param content
+	 * @param sender of the letter
+	 * @param receiver of the letter
+	 * @param content of the letter
 	 */
 	public PromissoryNote(Inhabitant sender, Inhabitant receiver,Money content) {
 		super(sender, receiver, content);

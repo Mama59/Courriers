@@ -1,10 +1,17 @@
 package letter;
-
+/**
+ * 
+ * @author Marine,Remy
+ *
+ */
 public class UrgentLetter<T extends Letter<?>> extends AbstractLetterDecorator<T> {
 	
 	private Letter<?> letter;
 	private int DEFAULT_TAX = 2;
-
+	/**
+	 * Constructor of the UrgentLetter
+	 * @param letter to set to Urgent
+	 */
 	public UrgentLetter(T letter) {
 		super(letter.getSender(), letter.getReceiver(), letter);
 		this.letter = letter;

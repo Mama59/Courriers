@@ -80,15 +80,24 @@ public class City {
 	public List<Inhabitant> getAllInhabitants() {
 		return this.inhabitants;
 	}
-
+	/**
+	 * 
+	 * @return number of inhabitants of City
+	 */
 	public int getNumbersOfInhabitants() {
 		return inhabitants.size();
 	}
-
+	/**
+	 * 
+	 * @return number of letters for the next day
+	 */
 	public int getNumbersOfLettersForTomorrow() {
 		return letterBoxForTomorrow.size();
 	}
-
+	/**
+	 * 
+	 * @return number of letters for the current day
+	 */
 	public int getNumbersOfLettersForToday() {
 		return letterBox.size();
 	}

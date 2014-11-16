@@ -1,15 +1,24 @@
 package content;
-
+/**
+ * 
+ * @author Marine,Remy
+ *
+ */
 
 public abstract class AbstractContent<T> implements Content{
-
 	protected T value;
+	/**
+	 * Constructor of the Abstract Content
+	 * @param value
+	 */
 	public AbstractContent(T value) {
-		// TODO Auto-generated constructor stub
 		this.value = value;
 	}
-	public T getValue()
-	{
+	/**
+	 * 
+	 * @return the type of Value
+	 */
+	public T getValue()	{
 		return value;
 	}
 	@Override

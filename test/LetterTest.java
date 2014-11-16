@@ -3,6 +3,8 @@ package test;
 import static org.junit.Assert.assertEquals;
 import letter.PromissoryNote;
 import letter.RegistredLetter;
+import letter.SimpleLetter;
+import letter.UrgentLetter;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -10,6 +12,7 @@ import org.junit.Test;
 import base.City;
 import base.Inhabitant;
 import content.Money;
+import content.Text;
 
 public class LetterTest{
 	City gotham;
@@ -54,6 +57,14 @@ public class LetterTest{
 	@Test
 	public void testToStringRegisteredLetter() {
 		assertEquals("a Registred letter whose content is a PromissoryNote letter whose content is a money content (10)",rl.toString());
+	}
+	@Test
+	public void testUrgentLetter() {
+		Text text = new Text("Coucou");
+		SimpleLetter sl = new SimpleLetter(marine,remy,text);
+		UrgentLetter<SimpleLetter> ul = new UrgentLetter<SimpleLetter>(sl);
+		assertEquals(2,ul.getCost(),0.01);
+		assertEquals("a simple letter whose content is a text content (Coucou)",ul.getContent().toString());
 	}
 
 }
