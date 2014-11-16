@@ -1,12 +1,13 @@
 package letter;
 
+import content.Content;
 import base.Inhabitant;
 
 /**
  * @author Marine,Remy
  *
  */
-public abstract class Letter<T> {
+public abstract class Letter<T extends Content> implements Content {
 	Inhabitant sender;
 	Inhabitant receiver;
 	T content;

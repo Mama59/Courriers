@@ -6,7 +6,6 @@ package content;
 
 /**
  * @author Marine,Remy
- * @param <Integer>
  *
  */
 public class Money extends AbstractContent<Integer>{
